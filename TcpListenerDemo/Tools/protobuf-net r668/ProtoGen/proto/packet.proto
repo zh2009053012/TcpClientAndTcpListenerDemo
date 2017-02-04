@@ -1,0 +1,14 @@
+package com.crownrace.msg;
+
+enum NET_CMD{
+	LOGIN_REQ_CMD=1;
+	LOGIN_ACK_CMD=2;
+	HEARTBEAT_REQ_CMD=3;
+	HEARTBEAT_ACK_CMD=4;
+	LEAVE_GAME_NTF_CMD=5;
+}
+
+message packet{
+	required NET_CMD cmd=1;
+	required bytes payload=2;
+}
